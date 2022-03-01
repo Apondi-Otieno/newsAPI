@@ -19,3 +19,11 @@ This is a news API that'll display news content from various news outlets.
 3.cd news-highlight-API
 4.chmod a+x start.sh
 5../start.sh
+
+## Technologies Used
+1)Python3 flask.
+2) HTML.
+3)Bootstrap.
+
+## Contact
+incase of any issues, email apondioti@gmail.com
