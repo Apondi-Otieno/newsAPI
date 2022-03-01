@@ -1,18 +1,18 @@
-{% macro dispalyNewsList(news_list) %}
-{% for new in news_list %}
-<div class="row featurette">
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">
-            {{ new.title | truncate(50)}}
-        </h2>
-        <p class="lead"> {{ new.description }} </p>
-        <a href="{{new.url}}" class="btn btn-primary" target="_blank">Find out more &raquo;</a>
+{% macro display_sources_list(sources_resulting_list) %}
+    <div class="row">
+        {% for source in sources_resulting_list %}
+        <div class="col-md-4" style="height: 250px;width: 100%;;display: block;background-color: white">
+            <h3 style="color:black; font-weight:600;font-family: 'Cinzel Decorative', cursive;list-style-type: none;">
+                <li>{{source.name}}</li>
+            </h3>
+            <li style="font-size:18px;list-style-type: none;"> <strong>ABOUT SOURCE:</strong> {{source.description}}</li>
+            <li style=" font-size:18px;list-style-type: none;"><strong>COUNTRY:</strong> {{source.country}}</li>
+            <a href="">
+                <li style=" font-size:18px;list-style-type: none;"><strong>OFFICIAL SITE:</strong> {{source.url}}</li>
+            </a>
+            <a href="/sources/{{source.id}}" class="btn btn-primary" style="font: size 18px;font-family: 'League Gothic' , cursive;">See
+                {{source.name}} news articles</a>
+        </div>
+        {% endfor %}
     </div>
-    <div class="col-md-5 order-md-1">
-       <img src="{{ new.urlToImage }}" width="500" height="500" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" >
-    </div>
-</div>
-<hr class="featurette-divider">
-
-{% endfor %}
 {% endmacro %}

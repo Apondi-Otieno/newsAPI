@@ -1,33 +1,76 @@
-{% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!DOCTYPE html>
+<html>
 
+<head>
+    <!-- Styles block -->
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    {% endblock %}
+</head>
+<!-- Content block -->
+{% block content %}
+<div class="container-fluid" style="background-color: white;margin: top -50px;;">
+    <h1 style="text-align:center; color:rgb(7, 7, 22); font-weight:600;font-family: 'Cinzel Decorative', cursive;">
+        {{title}}</h1>
+    <p style="font-family: 'Charm', cursive; font-size:18px;color: #28364b;text-align: center;">{{heading}}</p>
+    <!-- Sports section -->
+    <ul>
+        <h2 style="text-align:center; color:black; font-weight:300;font-family: 'League Gothic' , cursive;">
+            <center>Sports News Sources</center>
+        </h2>
+        <hr>
+        {{macro.display_sources_list(sports)}}
+    </ul>
+    <!-- Business section -->
+    <ul>
+        <h2
+            style="text-align:center; color:rgb(94, 47, 47); font-weight:600;font-family: 'League Gothic' , cursive;list-style-type: none;">
+            <marquee behavior="scroll" direction="up">
+                <center>Business News Sources</center>
+            </marquee>
+        </h2>
+        <hr>
+        {{macro.display_sources_list(business)}}
+    </ul>
+    <!-- Entertainment section -->
+    <ul>:
+        <h2 style="text-align:center; color:rgb(107, 56, 56); font-weight:600;font-family:'League Gothic', cursive;">
+            <marquee behavior="scroll" direction="up">
+                <center>Entertainment News Sources</center>
+            </marquee>
+        </h2>
+        <hr>
+        {{macro.display_sources_list(entertainment)}}
+    </ul>
+    <!-- technology section -->
+    <ul>
+        <h2 style="text-align:center; color:rgb(70, 29, 29); font-weight:600;font-family: 'League Gothic', cursive;">
+            <marquee behavior="scroll" direction="up">
+                <center>Technology News Sources</center>
+            </marquee>
+        </h2>
+        <hr>
+        {{macro.display_sources_list(tech)}}
+    </ul>
+    <!-- General section -->
+    <ul>
+        <h2 style="text-align:center; color:rgb(117, 51, 51); font-weight:600;font-family: 'League Gothic', cursive;">
+            <marquee behavior="scroll" direction="up">
+                <center>General News Source</center>
+            </marquee>
+        </h2>
+        <hr>
+        {{macro.display_sources_list(general)}}
+    </ul>
+</div>
+{% endblock %}
 
-        {% block content %}
-          
-             <h1 style="color:black;text-align:center;font-weight:bold;"> TOP WORLD NEWS SOURCES</h1>
-
-         {% for highlight in highlights %}
-         <div class="container-fluid ">
-          <div class="card text-center">
-            <div class="card-header">
-              <h2 style="color:black;font-family: 'Mochiy Pop P One', sans-serif;
-                font-family: 'Outfit', sans-serif;
-                font-family: 'Poppins', sans-serif;
-                font-family: 'Roboto Slab', serif;"
-                 class="card-title">{{ highlight.name}}</h2>
-            </div>
-            <div class="card-body">
-              <h6 style="color:green;" class="card-subtitle mb-2 text-muted">Your Trusted source</h6>
-              <p style="color:black" class="card-text">{{highlight.description}}</p>
-              <a href="{{ highlight.url}}" class="btn btn-warning">View More</a>
-            </div>
-            <div class="card-footer text-muted">
-              Streaming Live 🛑
-            </div>
-            {% endfor %}
-          </div>
-         </div>
-          
-     
-{% endblock%}  
-
+</html>
