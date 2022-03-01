@@ -8,12 +8,12 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
+    return render_template('index.html',title=title,highlights=highlight)
 
-@app.route('/source')
-    def source();:
-    
+@app.route('/source/<int:id>')
+    def source(id);:
+   
         '''
         View movie page function that returns the movie details page and its data
         '''
-        return render_template('source.html')
+        return render_template('source.html',source=source, id=id)
