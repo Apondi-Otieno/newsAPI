@@ -29,3 +29,6 @@ This is a news API that'll display news content from various news outlets.
 incase of any issues, email apondioti@gmail.com
 
 ## LICENSE
+MIT License
+
+Copyright (c) 2022 Apondi Otieno
