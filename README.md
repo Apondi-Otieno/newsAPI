@@ -7,23 +7,25 @@ This is a news API that'll display news content from various news outlets.
 
 ## Setup/Installation Requirements
 
-1)Install the Visual studio code.
-2)Git clone the repository.
-3)Make sure the live server extension is installed.
-4)Click on Go live.
+- Install the Visual studio code.
+- Git clone the repository.
+- Make sure the live server extension is installed.
+- Click on Go live.
 
 ## Running the Application and cloning the repository
 
-1.Open terminal:
-2.git clone:https://github.com/Apondi-Otieno/newsAPI.git
-3.cd news-highlight-API
-4.chmod a+x start.sh
-5../start.sh
+- Open terminal:
+- git clone:https://github.com/Apondi-Otieno/newsAPI.git
+- cd news-highlight-API
+- chmod a+x start.sh
+- ./start.sh
 
 ## Technologies Used
-1)Python3 flask.
-2) HTML.
-3)Bootstrap.
+- Python3 flask.
+- HTML.
+- Bootstrap.
 
 ## Contact
 incase of any issues, email apondioti@gmail.com
+
+## LICENSE
