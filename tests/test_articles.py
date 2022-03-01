@@ -11,10 +11,10 @@ class ArticleTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        # self.new_article = Movie(1234,'Python Must Be Crazy','A thrilling new Python Series','https://image.tmdb.org/t/p/w500/khsjha27hbs',8.5,129993)
+        self.new_article = article(1234,'Python Must Be Crazy','A thrilling new Python Series','https://image.tmdb.org/t/p/w500/khsjha27hbs')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_article, models.Article))
+        self.assertTrue(isinstance(self.new_article, models.article))
 
 
 if __name__ == '__main__':
