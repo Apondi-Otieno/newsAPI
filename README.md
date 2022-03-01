@@ -15,7 +15,7 @@ This is a news API that'll display news content from various news outlets.
 ## Running the Application and cloning the repository
 
 1.Open terminal:
-2.git clone:
+2.git clone:https://github.com/Apondi-Otieno/newsAPI.git
 3.cd news-highlight-API
 4.chmod a+x start.sh
 5../start.sh
