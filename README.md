@@ -23,6 +23,9 @@ This is a news API that'll display news content from various news outlets.
 - chmod a+x start.sh
 - ./start.sh
 
+## Live Link
+https://enigmatic-eyrie-56833.herokuapp.com/
+
 ## Technologies Used
 - Python3 flask.
 - HTML.
